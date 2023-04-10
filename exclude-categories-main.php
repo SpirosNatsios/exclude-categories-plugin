@@ -14,5 +14,6 @@ include_once('includes/menu-functions.php');
 include_once('includes/admin/options-page.php');
 include_once('includes/admin/shop-widget-options-page.php');
 include_once('includes/admin/shop-page-options-page.php');
+include_once('includes/admin/related-products-options-page.php');
  
  ?>
