@@ -12,8 +12,8 @@ function exclude_categories_options_page()
         <br>
         <div class="options-buttons">
             <a class="button button-primary" href="<?php echo admin_url('edit-tags.php?taxonomy=product_cat&post_type=product'); ?>">Exclude categories from specific products</a>
-            <a class="button button-primary" href="<?php echo admin_url('edit-tags.php?taxonomy=product_cat'); ?>">Exclude categories from Shop page</a>
-            <a class="button button-primary" href="<?php echo admin_url('admin.php?page=wc-settings&tab=products&section=display'); ?>">Exclude categories from Shop page widget</a>
+            <a class="button button-primary" href="<?php echo admin_url('admin.php?page=shop-page'); ?>">Exclude categories from Shop page</a>
+            <a class="button button-primary" href="<?php echo admin_url('admin.php?page=shop-page-widget'); ?>">Exclude categories from Shop page widget</a>
         </div>
     </div>
     <?php
