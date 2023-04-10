@@ -13,5 +13,6 @@ include_once('exclude-categories-functions.php');
 include_once('includes/menu-functions.php');
 include_once('includes/options-page.php');
 include_once('includes/shop-widget-options-page.php');
+include_once('includes/shop-page-options-page.php');
  
  ?>
