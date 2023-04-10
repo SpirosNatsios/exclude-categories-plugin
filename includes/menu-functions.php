@@ -31,6 +31,16 @@ function exclude_categories_add_menu()
         'shop-page',
         'shop_page_options_page'
     );
+    
+    add_submenu_page(
+        'exclude-categories',
+        'Related Products',
+        'Related Products',
+        'manage_options',
+        'related-products',
+        'related_products_options_page'
+
+    );
 }
 
 function shop_page_widget_register_settings()
@@ -45,7 +55,10 @@ function shop_page_widget_register_settings()
         'shop_page_excluded_categories'
     );
 
-
+    register_setting(
+        'related_products_options_group',
+        'related_products_excluded_categories'
+    );
    
 }
  ?>
