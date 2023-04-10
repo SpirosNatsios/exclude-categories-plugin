@@ -1,7 +1,7 @@
 <?php
 
 add_action('admin_menu', 'exclude_categories_add_menu');
-add_action('admin_init', 'exclude_categories_register_settings');
+add_action('admin_init', 'shop_page_widget_register_settings');
 
 function exclude_categories_add_menu()
 {
@@ -29,16 +29,23 @@ function exclude_categories_add_menu()
         'Shop Page',
         'manage_options',
         'shop-page',
-        'shop-page-options-page'
+        'shop_page_options_page'
     );
 }
 
-function exclude_categories_register_settings()
+function shop_page_widget_register_settings()
 {
     register_setting(
-        'exclude_categories_options_group',
-        'excluded_categories'
+        'shop_page_widget_options_group',
+        'shop_page_widget_excluded_categories'
     );
-}
 
-?>
+    register_setting(
+        'shop_page_options_group',
+        'shop_page_excluded_categories'
+    );
+
+
+   
+}
+ ?>
