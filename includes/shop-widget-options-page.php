@@ -6,7 +6,7 @@ function shop_page_widget_options_page()
         return;
     }
 
-    $excluded_categories = get_option('excluded_categories', array());
+    $excluded_categories = get_option('shop_page_widget_excluded_categories', array());
     $categories = get_terms(
         array(
             'taxonomy' => 'product_cat',
@@ -21,19 +21,19 @@ function shop_page_widget_options_page()
         </h1>
         
         <form action="options.php" method="post">
-            <?php settings_fields('exclude_categories_options_group'); ?>
-            <?php do_settings_sections('exclude_categories_options_group'); ?>
+            <?php settings_fields('shop_page_widget_options_group'); ?>
+            <?php do_settings_sections('shop_page_widget_options_group'); ?>
             <h2>Select the categories you want excluded from the shop page widget</h2>
             <table class="form-table">
                 <tbody>
                     <tr valign="top">
                         <th scope="row">
-                            <?php _e('Categories', 'excluded_categories'); ?>
+                            <?php _e('Categories', 'shop_page_widget_excluded_categories'); ?>
                         </th>
                         <td>
                             <?php foreach ($categories as $category): ?>
                                 <label>
-                                    <input type="checkbox" name="excluded_categories[]"
+                                    <input type="checkbox" name="shop_page_widget_excluded_categories[]"
                                         value="<?php echo esc_attr($category->term_id); ?>" <?php if (is_array($excluded_categories) && in_array($category->term_id, $excluded_categories))
                                                echo 'checked="checked"'; ?>>
                                     <?php echo esc_html($category->name); ?>
@@ -45,7 +45,7 @@ function shop_page_widget_options_page()
                                         $child_term = get_term_by('id', $child, 'product_cat');
                                         ?>
                                         &nbsp;&nbsp;&nbsp;&nbsp;<label>
-                                            <input type="checkbox" name="excluded_categories[]"
+                                            <input type="checkbox" name="shop_page_widget_excluded_categories[]"
                                                    value="<?php echo esc_attr($child_term->term_id); ?>" <?php if (is_array($excluded_categories) && in_array($child_term->term_id, $excluded_categories))
                                             echo 'checked="checked"'; ?>>
                                             <?php echo esc_html($child_term->name); ?>
