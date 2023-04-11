@@ -6,19 +6,18 @@ function exclude_categories_options_page()
         return;
     }
     ?>
-    <div class="wrap">
-        <h1>Select from where you want to exclude categories</h1>
-        <p>Please select the option from below where you want to exclude the categories:</p>
-        <br>
-        <div class="options-buttons">
-            <a class="button button-primary" href="<?php echo admin_url('admin.php?page=shop-page'); ?>">Exclude categories from Shop page</a>
-            <a class="button button-primary" href="<?php echo admin_url('admin.php?page=shop-page-widget'); ?>">Exclude categories from Shop page widget</a>
-            <a class="button button-primary" href="<?php echo admin_url('admin.php?page=related-products'); ?>">Exclude categories from Related Products</a>
+    <div class="big-container">
+        <div class="small-container">
+            <h1>Exclude Categories</h1>
+            <p>Please select from below where you would like products belonging to specific categories not to be displayed</p>
+            <div class="page-buttons">
+                <a class="page-button" href="<?php echo admin_url('admin.php?page=shop-page'); ?>">Exclude categories from Shop page</a>
+                <a class="page-button" href="<?php echo admin_url('admin.php?page=shop-page-widget'); ?>">Exclude categories from Shop page widget</a>
+                <a class="page-button" href="<?php echo admin_url('admin.php?page=related-products'); ?>">Exclude categories from Related Products</a>
+            </div>
         </div>
     </div>
     <?php
 }
-
-
 
 ?>
