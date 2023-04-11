@@ -16,4 +16,11 @@ include_once('includes/admin/shop-widget-options-page.php');
 include_once('includes/admin/shop-page-options-page.php');
 include_once('includes/admin/related-products-options-page.php');
  
+
+
+function exclude_categories_enqueue_styles() {
+    wp_enqueue_style( 'exclude-categories-styles', plugins_url( 'assets/css/options-page.css', __FILE__ ) );
+}
+
+add_action( 'admin_enqueue_scripts', 'exclude_categories_enqueue_styles' );
  ?>

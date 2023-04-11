@@ -27,6 +27,7 @@ function exclude_product_category_from_shop_page( $q ) {
     function exclude_product_category_from_related_products($related_posts, $product_id, $args){
 
         $term_ids = get_option('related_products_excluded_categories', array());
+        
 
         if (!empty($term_ids)){
             $excluded_categories = wc_get_products( array(
